@@ -6,9 +6,14 @@ import mysql from "mysql2";
 // services.msc MySQL80
 const DBConnect = async () => {
   const databaseName = process.env.DB_NAME!;
+
+  console.log("::CONECTION",{
+    host: `${process.env.DB_HOST}`,
+    user: "root",
+    password: process.env.DB_PASSWORD,
+  })
   const connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    // user: process.env.DB_USERNAME,
+    host: `${process.env.DB_HOST}`,
     user: "root",
     password: process.env.DB_PASSWORD,
   });

@@ -1,0 +1,3 @@
+ALTER USER 'netflix'@'%' IDENTIFIED WITH mysql_native_password BY 'project_team3';
+GRANT ALL PRIVILEGES ON netflix_accounts.* TO 'netflix'@'%';
+FLUSH PRIVILEGES;
